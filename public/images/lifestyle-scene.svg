@@ -1,0 +1,43 @@
+<svg width="1400" height="1000" viewBox="0 0 1400 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="1000" rx="28" fill="#0A0A0A"/>
+  <rect width="1400" height="1000" rx="28" fill="url(#backdrop)"/>
+  <path d="M0 328C168 262 290 228 414 228C564 228 658 310 824 310C984 310 1100 206 1240 206C1294 206 1348 220 1400 246V1000H0V328Z" fill="#111111"/>
+  <path d="M78 724C182 636 294 592 398 592H866C1008 592 1142 660 1244 772V1000H78V724Z" fill="#161616"/>
+  <rect x="190" y="478" width="508" height="228" rx="10" fill="#181818" stroke="#C9A84C" stroke-opacity="0.48"/>
+  <path d="M190 478L444 334L698 478" stroke="#F5F0E8" stroke-opacity="0.74" stroke-width="5"/>
+  <rect x="262" y="542" width="98" height="90" fill="#F5F0E8" fill-opacity="0.88"/>
+  <rect x="390" y="542" width="86" height="90" fill="#F5F0E8" fill-opacity="0.66"/>
+  <rect x="504" y="542" width="108" height="90" fill="#F5F0E8" fill-opacity="0.88"/>
+  <rect x="824" y="520" width="404" height="116" rx="58" fill="url(#poolGlow)" stroke="#C9A84C" stroke-opacity="0.38"/>
+  <path d="M748 664H1314" stroke="#C9A84C" stroke-opacity="0.26" stroke-width="4" stroke-linecap="round"/>
+  <path d="M782 708H1280" stroke="#F5F0E8" stroke-opacity="0.16" stroke-width="3" stroke-linecap="round"/>
+  <path d="M820 412C848 324 924 288 1000 288C1092 288 1176 350 1180 434C1186 532 1106 608 992 608C880 608 786 518 820 412Z" fill="url(#grove)" opacity="0.84"/>
+  <path d="M918 624L952 468" stroke="#C9A84C" stroke-width="8" stroke-linecap="round"/>
+  <path d="M1050 624L1084 458" stroke="#C9A84C" stroke-width="8" stroke-linecap="round"/>
+  <g opacity="0.92">
+    <path d="M102 936C216 894 356 874 492 874C664 874 780 922 940 934C1102 946 1254 928 1334 900" stroke="#C9A84C" stroke-width="4" stroke-linecap="round"/>
+    <path d="M114 972C252 938 394 930 550 940C704 950 822 982 982 984C1126 986 1240 968 1326 948" stroke="#F5F0E8" stroke-opacity="0.22" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <circle cx="1162" cy="148" r="98" fill="url(#sunlight)" opacity="0.86"/>
+  <defs>
+    <radialGradient id="backdrop" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(740 116) rotate(90) scale(960 1300)">
+      <stop stop-color="#221C11"/>
+      <stop offset="0.48" stop-color="#121212"/>
+      <stop offset="1" stop-color="#060606"/>
+    </radialGradient>
+    <linearGradient id="poolGlow" x1="824" y1="520" x2="1228" y2="636" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#12303A"/>
+      <stop offset="0.58" stop-color="#1C4B5A"/>
+      <stop offset="1" stop-color="#102128"/>
+    </linearGradient>
+    <radialGradient id="grove" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(992 448) rotate(90) scale(164 194)">
+      <stop stop-color="#324227"/>
+      <stop offset="1" stop-color="#171A14"/>
+    </radialGradient>
+    <radialGradient id="sunlight" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1162 148) rotate(90) scale(98)">
+      <stop stop-color="#F5F0E8"/>
+      <stop offset="0.58" stop-color="#DAB763"/>
+      <stop offset="1" stop-color="#C9A84C" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

@@ -1,0 +1,40 @@
+<svg width="1400" height="960" viewBox="0 0 1400 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="960" rx="28" fill="#0A0A0A"/>
+  <rect width="1400" height="960" rx="28" fill="url(#villaBg)"/>
+  <circle cx="1138" cy="146" r="94" fill="url(#villaSun)" opacity="0.84"/>
+  <path d="M0 414C150 356 274 330 392 330C546 330 676 404 842 404C1014 404 1116 278 1268 278C1316 278 1360 292 1400 314V960H0V414Z" fill="#121212"/>
+  <path d="M164 560H1140V780H164V560Z" fill="#171717" stroke="#C9A84C" stroke-opacity="0.44"/>
+  <path d="M212 560L486 400H1122L1140 560H212Z" fill="#191919" stroke="#F5F0E8" stroke-opacity="0.74" stroke-width="4"/>
+  <path d="M846 438H1108V580H846V438Z" fill="#1F1F1F" stroke="#C9A84C" stroke-opacity="0.44"/>
+  <path d="M306 610H444V742H306V610Z" fill="#F5F0E8" fill-opacity="0.84"/>
+  <path d="M490 610H604V742H490V610Z" fill="#F5F0E8" fill-opacity="0.66"/>
+  <path d="M654 610H768V742H654V610Z" fill="#F5F0E8" fill-opacity="0.82"/>
+  <path d="M886 474H1042V556H886V474Z" fill="#F5F0E8" fill-opacity="0.84"/>
+  <rect x="982" y="676" width="260" height="86" rx="43" fill="url(#pool)"/>
+  <path d="M962 810C1082 834 1202 828 1318 790" stroke="#C9A84C" stroke-width="4" stroke-linecap="round"/>
+  <path d="M112 878C296 820 476 818 648 842C824 866 960 906 1146 906C1242 906 1314 894 1362 878" stroke="#F5F0E8" stroke-opacity="0.24" stroke-width="3" stroke-linecap="round"/>
+  <path d="M184 792L230 666" stroke="#C9A84C" stroke-width="8" stroke-linecap="round"/>
+  <path d="M1226 770L1272 646" stroke="#C9A84C" stroke-width="8" stroke-linecap="round"/>
+  <path d="M148 632C178 548 254 514 328 514C418 514 488 584 488 666C488 758 404 812 314 812C216 812 118 740 148 632Z" fill="url(#grove)"/>
+  <defs>
+    <radialGradient id="villaBg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(700 104) rotate(90) scale(940 1320)">
+      <stop stop-color="#221C12"/>
+      <stop offset="0.46" stop-color="#121212"/>
+      <stop offset="1" stop-color="#060606"/>
+    </radialGradient>
+    <radialGradient id="villaSun" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1138 146) rotate(90) scale(94)">
+      <stop stop-color="#F5F0E8"/>
+      <stop offset="0.58" stop-color="#D7B45D"/>
+      <stop offset="1" stop-color="#C9A84C" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pool" x1="982" y1="676" x2="1242" y2="762" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#173642"/>
+      <stop offset="0.58" stop-color="#2B5B67"/>
+      <stop offset="1" stop-color="#12303A"/>
+    </linearGradient>
+    <radialGradient id="grove" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(300 652) rotate(90) scale(160 188)">
+      <stop stop-color="#2D3B27"/>
+      <stop offset="1" stop-color="#171914"/>
+    </radialGradient>
+  </defs>
+</svg>
