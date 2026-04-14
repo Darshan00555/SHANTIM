@@ -1,3 +1,9 @@
+import goaBedroom from '../assets/goa-bedroom-new.png';
+import goaPlots from '../assets/goa-plots-new.png';
+import goaVillas from '../assets/goa-villas-new.png';
+import heroVilla from '../assets/hero-villa-new.png';
+import logo from '../assets/logo.jpeg';
+
 import { useState } from 'react';
 
 import {
@@ -106,19 +112,19 @@ const villaProducts = [
   {
     title: '2 BHK Villa',
     subtitle: 'Private pool, garden, and lake-oriented outdoor living.',
-    image: '/images/goa-villas-new.png',
+    image: goaVillas,
     tags: ['Pool', 'Garden Deck', 'Lake View'],
   },
   {
     title: '3 BHK Villa',
     subtitle: 'Spacious family layout with premium suite-driven planning.',
-    image: '/images/goa-bedroom-new.png',
+    image: goaBedroom,
     tags: ['Suite Option', 'Family Lounge', 'Resort Finish'],
   },
   {
     title: '5 BHK Villa',
     subtitle: 'Ultra-luxury residence with a dramatic double-height experience.',
-    image: '/images/hero-villa-new.png',
+    image: heroVilla,
     tags: ['Double Height', 'Ultra Luxury', 'Signature Address'],
   },
 ];
@@ -294,7 +300,7 @@ const Home = () => {
         <div className={`${shellClass} flex items-center justify-between py-3.5 sm:py-4`}>
           <a href="#top" className="flex items-center">
             <img
-              src="/logo.jpeg"
+              src={logo}
               alt="SHANTIM"
               className="h-8 w-auto object-contain brightness-110 contrast-125 sm:h-10"
             />
@@ -451,7 +457,7 @@ const Home = () => {
                   Lakeside Villa Experience
                 </div>
                 <img
-                  src="/images/hero-villa-new.png"
+                  src={heroVilla}
                   alt="Luxury lakeside villa at Shantim Goa"
                   className="h-[230px] w-full object-cover sm:h-[320px] lg:h-[390px]"
                 />
@@ -496,7 +502,7 @@ const Home = () => {
               style={revealStyle('0.08s')}
             >
               <img
-                src="/images/goa-plots-new.png"
+                src={goaPlots}
                 alt="Premium Goa plots and land development"
                 className="h-[220px] w-full object-cover sm:h-[280px] lg:h-[320px]"
               />

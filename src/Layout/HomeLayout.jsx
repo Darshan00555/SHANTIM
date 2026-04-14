@@ -1,3 +1,5 @@
+import logo from '../assets/logo.jpeg';
+
 import React from 'react';
 
 const HomeLayout = ({ children }) => {
@@ -7,7 +9,7 @@ const HomeLayout = ({ children }) => {
         <div className="container mx-auto flex items-center justify-between">
           <a href="/">
             <img
-              src="/logo.jpeg"
+              src={logo}
               alt="SHANTIM Logo"
               className="h-8 w-auto object-contain brightness-110 sm:h-10"
             />
