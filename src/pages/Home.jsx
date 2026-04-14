@@ -1034,7 +1034,7 @@ const Home = () => {
           <div>
             <div className="flex items-center">
               <img
-                src="/logo.jpeg"
+                src={logo}
                 alt="SHANTIM Logo"
                 className="h-10 w-auto object-contain brightness-110 sm:h-12"
               />
