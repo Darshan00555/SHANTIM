@@ -106,19 +106,19 @@ const villaProducts = [
   {
     title: '2 BHK Villa',
     subtitle: 'Private pool, garden, and lake-oriented outdoor living.',
-    image: '/images/brochure-pool-villa.jpg',
+    image: '/images/goa-villas-new.png',
     tags: ['Pool', 'Garden Deck', 'Lake View'],
   },
   {
     title: '3 BHK Villa',
     subtitle: 'Spacious family layout with premium suite-driven planning.',
-    image: '/images/brochure-bedroom.jpg',
+    image: '/images/goa-bedroom-new.png',
     tags: ['Suite Option', 'Family Lounge', 'Resort Finish'],
   },
   {
     title: '5 BHK Villa',
     subtitle: 'Ultra-luxury residence with a dramatic double-height experience.',
-    image: '/images/brochure-hero-villa.jpg',
+    image: '/images/hero-villa-new.png',
     tags: ['Double Height', 'Ultra Luxury', 'Signature Address'],
   },
 ];
@@ -292,11 +292,12 @@ const Home = () => {
 
       <header className="fixed inset-x-0 top-0 z-50 border-b border-[rgba(201,168,76,0.14)] bg-[rgba(10,10,10,0.78)] backdrop-blur-md">
         <div className={`${shellClass} flex items-center justify-between py-3.5 sm:py-4`}>
-          <a
-            href="#top"
-            className="font-heading text-xl font-light tracking-[0.28em] text-[#F5F0E8] sm:text-2xl sm:tracking-[0.32em]"
-          >
-            SHANTIM
+          <a href="#top" className="flex items-center">
+            <img
+              src="/logo.jpeg"
+              alt="SHANTIM"
+              className="h-8 w-auto object-contain brightness-110 contrast-125 sm:h-10"
+            />
           </a>
 
           <nav className="hidden items-center gap-6 xl:flex">
@@ -450,8 +451,8 @@ const Home = () => {
                   Lakeside Villa Experience
                 </div>
                 <img
-                  src="/images/brochure-hero-villa.jpg"
-                  alt="Original brochure image of a premium lake-facing villa"
+                  src="/images/hero-villa-new.png"
+                  alt="Luxury lakeside villa at Shantim Goa"
                   className="h-[230px] w-full object-cover sm:h-[320px] lg:h-[390px]"
                 />
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(180deg,transparent,rgba(10,10,10,0.95))]" />
@@ -495,8 +496,8 @@ const Home = () => {
               style={revealStyle('0.08s')}
             >
               <img
-                src="/images/brochure-goa-beach.jpg"
-                alt="Original brochure image of a Goa beach at sunset"
+                src="/images/goa-plots-new.png"
+                alt="Premium Goa plots and land development"
                 className="h-[220px] w-full object-cover sm:h-[280px] lg:h-[320px]"
               />
             </div>
@@ -1025,9 +1026,13 @@ const Home = () => {
       <footer className="border-t border-[rgba(201,168,76,0.12)] px-0 py-12 sm:py-14 lg:py-16">
         <div className={`${shellClass} grid gap-8 lg:grid-cols-[1.1fr_0.9fr_0.9fr]`}>
           <div>
-            <p className="font-heading text-[2rem] font-light tracking-[0.26em] text-[#F5F0E8] sm:text-[2.2rem]">
-              SHANTIM
-            </p>
+            <div className="flex items-center">
+              <img
+                src="/logo.jpeg"
+                alt="SHANTIM Logo"
+                className="h-10 w-auto object-contain brightness-110 sm:h-12"
+              />
+            </div>
             <div className="mt-5 grid gap-3 text-sm text-[#8D887E]">
               <a
                 href="tel:+918527577112"

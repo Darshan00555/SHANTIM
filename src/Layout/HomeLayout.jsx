@@ -5,7 +5,13 @@ const HomeLayout = ({ children }) => {
     <div className="flex min-h-screen flex-col bg-black text-white">
       <header className="sticky top-0 z-50 border-b border-white/10 bg-black/50 px-6 py-4 backdrop-blur-md">
         <div className="container mx-auto flex items-center justify-between">
-          <h1 className="text-xl font-bold text-orange-500">Devi/webakash1806</h1>
+          <a href="/">
+            <img
+              src="/logo.jpeg"
+              alt="SHANTIM Logo"
+              className="h-8 w-auto object-contain brightness-110 sm:h-10"
+            />
+          </a>
           <nav>
             <ul className="flex space-x-6 text-gray-300">
               <li>
