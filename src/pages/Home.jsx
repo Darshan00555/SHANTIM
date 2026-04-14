@@ -1,3 +1,8 @@
+import brochureAerial from '../assets/brochure-aerial-layout.jpg';
+import brochureAmenities from '../assets/brochure-amenities-collage.jpg';
+import brochureClubhouse from '../assets/brochure-clubhouse.jpg';
+import brochureConstruction from '../assets/brochure-construction-progress.jpg';
+import brochureLounge from '../assets/brochure-lounge.jpg';
 import goaBedroom from '../assets/goa-bedroom-new.png';
 import goaPlots from '../assets/goa-plots-new.png';
 import goaVillas from '../assets/goa-villas-new.png';
@@ -623,7 +628,7 @@ const Home = () => {
                 style={revealStyle('0.05s')}
               >
                 <img
-                  src="/images/brochure-clubhouse.jpg"
+                  src={brochureClubhouse}
                   alt="Original brochure image of a premium clubhouse-style exterior"
                   className="h-[220px] w-full object-cover sm:h-[260px] lg:h-[300px]"
                 />
@@ -661,7 +666,7 @@ const Home = () => {
               style={revealStyle('0.06s')}
             >
               <img
-                src="/images/brochure-aerial-layout.jpg"
+                src={brochureAerial}
                 alt="Original brochure aerial layout image showing villa clusters"
                 className="h-[260px] w-full object-cover sm:h-[360px] lg:h-[500px]"
               />
@@ -700,7 +705,7 @@ const Home = () => {
               style={revealStyle('0.05s')}
             >
               <img
-                src="/images/brochure-amenities-collage.jpg"
+                src={brochureAmenities}
                 alt="Original brochure collage showing amenities and recreation offerings"
                 className="h-[220px] w-full object-contain sm:h-[300px] lg:h-[340px]"
               />
@@ -803,7 +808,7 @@ const Home = () => {
                 style={revealStyle('0.06s')}
               >
                 <img
-                  src="/images/brochure-lounge.jpg"
+                  src={brochureLounge}
                   alt="Original brochure image of a premium lounge interior"
                   className="h-[210px] w-full object-cover sm:h-[250px] lg:h-[280px]"
                 />
@@ -905,7 +910,7 @@ const Home = () => {
             >
               <div className="media-panel overflow-hidden">
                 <img
-                  src="/images/brochure-construction-progress.jpg"
+                  src={brochureConstruction}
                   alt="Original brochure image showing on-ground construction progress"
                   className="h-[220px] w-full object-cover sm:h-[280px] lg:h-full"
                 />
