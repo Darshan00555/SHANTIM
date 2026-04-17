@@ -1004,7 +1004,7 @@ const Home = () => {
                   </span>
                   <div>
                     <p className="text-[10px] tracking-[0.18em] text-[#8D887E] uppercase">Call</p>
-                    <p className="mt-1 text-sm text-[#F5F0E8]">9536- 202-202</p>
+                    <p className="mt-1 text-sm text-[#F5F0E8]">+91 95362 02202</p>
                   </div>
                 </a>
 
@@ -1050,7 +1050,7 @@ const Home = () => {
                 className="flex items-center gap-3 transition hover:text-[#F5F0E8]"
               >
                 <Phone size={16} className="text-[#C9A84C]" />
-                9536- 202-202
+                +91 95362 02202
               </a>
               <a
                 href="mailto:shantimgoa@gmail.com"
