@@ -328,7 +328,7 @@ const Home = () => {
               href="tel:9536202202"
               className="text-xs tracking-[0.18em] text-[#8E897F] uppercase transition hover:text-[#F5F0E8]"
             >
-              +91 95362 02202
+              9536-202-202
             </a>
             <a href="#enquire" className={`${buttonBaseClass} bg-[#C9A84C] text-[#0A0A0A]`}>
               Enquire Now
@@ -359,7 +359,7 @@ const Home = () => {
                 </a>
               ))}
               <a href="tel:9536202202" className="pt-2 text-sm text-[#8E897F]">
-                9536- 202-202
+                9536-202-202
               </a>
             </div>
           </div>
@@ -1004,7 +1004,7 @@ const Home = () => {
                   </span>
                   <div>
                     <p className="text-[10px] tracking-[0.18em] text-[#8D887E] uppercase">Call</p>
-                    <p className="mt-1 text-sm text-[#F5F0E8]">+91 95362 02202</p>
+                    <p className="mt-1 text-sm text-[#F5F0E8]">9536-202-202</p>
                   </div>
                 </a>
 
@@ -1050,7 +1050,7 @@ const Home = () => {
                 className="flex items-center gap-3 transition hover:text-[#F5F0E8]"
               >
                 <Phone size={16} className="text-[#C9A84C]" />
-                +91 95362 02202
+                9536-202-202
               </a>
               <a
                 href="mailto:shantimgoa@gmail.com"
@@ -1093,7 +1093,7 @@ const Home = () => {
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-[rgba(201,168,76,0.18)] bg-[rgba(10,10,10,0.96)] p-2.5 backdrop-blur-md md:hidden">
         <div className="grid grid-cols-2 gap-2.5">
           <a
-            href="tel:+919536202202"
+            href="tel:9536202202"
             className={`${buttonBaseClass} bg-[#C9A84C] px-3 py-3 text-center text-[#0A0A0A]`}
           >
             Call Now
