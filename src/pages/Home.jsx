@@ -325,10 +325,10 @@ const Home = () => {
 
           <div className="hidden items-center gap-4 xl:flex">
             <a
-              href="tel:+918527577112"
+              href="tel:9536202202"
               className="text-xs tracking-[0.18em] text-[#8E897F] uppercase transition hover:text-[#F5F0E8]"
             >
-              +91 8527577112
+              +91 95362 02202
             </a>
             <a href="#enquire" className={`${buttonBaseClass} bg-[#C9A84C] text-[#0A0A0A]`}>
               Enquire Now
@@ -358,8 +358,8 @@ const Home = () => {
                   {link.label}
                 </a>
               ))}
-              <a href="tel:+918527577112" className="pt-2 text-sm text-[#8E897F]">
-                +91 8527577112
+              <a href="tel:9536202202" className="pt-2 text-sm text-[#8E897F]">
+                9536- 202-202
               </a>
             </div>
           </div>
@@ -995,7 +995,7 @@ const Home = () => {
 
               <div className="grid gap-3 sm:grid-cols-2">
                 <a
-                  href="tel:+918527577112"
+                  href="tel:9536202202"
                   className={`${cardClass} reveal-up flex items-center gap-3 p-4 sm:p-5`}
                   style={revealStyle('0.06s')}
                 >
@@ -1004,7 +1004,7 @@ const Home = () => {
                   </span>
                   <div>
                     <p className="text-[10px] tracking-[0.18em] text-[#8D887E] uppercase">Call</p>
-                    <p className="mt-1 text-sm text-[#F5F0E8]">+91 8527577112</p>
+                    <p className="mt-1 text-sm text-[#F5F0E8]">9536- 202-202</p>
                   </div>
                 </a>
 
@@ -1046,11 +1046,11 @@ const Home = () => {
             </div>
             <div className="mt-5 grid gap-3 text-sm text-[#8D887E]">
               <a
-                href="tel:+918527577112"
+                href="tel:9536202202"
                 className="flex items-center gap-3 transition hover:text-[#F5F0E8]"
               >
                 <Phone size={16} className="text-[#C9A84C]" />
-                +91 8527577112
+                9536- 202-202
               </a>
               <a
                 href="mailto:shantimgoa@gmail.com"
@@ -1069,7 +1069,7 @@ const Home = () => {
             <div className="mt-4 grid gap-4 text-sm leading-7 text-[#8D887E]">
               <p>
                 <span className="block text-[#F5F0E8]">Corporate</span>
-                A-118, Royal Kapsons, Sector 136, Noida 201301
+                A-118, Ground and 1st floor, Diamond Tower, Sector-136, Noida-201 301(Uttar Pradesh)
               </p>
               <p>
                 <span className="block text-[#F5F0E8]">Goa Office</span>
@@ -1083,11 +1083,7 @@ const Home = () => {
           </div>
 
           <div>
-            <p className="text-[10px] tracking-[0.24em] text-[#C9A84C] uppercase sm:text-xs sm:tracking-[0.28em]">
-              Marketed By
-            </p>
-            <p className="mt-4 text-sm leading-7 text-[#8D887E]">Bestocity Realtors LLP</p>
-            <p className="mt-8 text-[10px] tracking-[0.18em] text-[#7D786F] uppercase sm:text-xs sm:tracking-[0.22em]">
+            <p className="text-[10px] tracking-[0.18em] text-[#7D786F] uppercase sm:text-xs sm:tracking-[0.22em]">
               © {new Date().getFullYear()} Shantim. All rights reserved.
             </p>
           </div>
@@ -1097,7 +1093,7 @@ const Home = () => {
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-[rgba(201,168,76,0.18)] bg-[rgba(10,10,10,0.96)] p-2.5 backdrop-blur-md md:hidden">
         <div className="grid grid-cols-2 gap-2.5">
           <a
-            href="tel:+918527577112"
+            href="tel:+919536202202"
             className={`${buttonBaseClass} bg-[#C9A84C] px-3 py-3 text-center text-[#0A0A0A]`}
           >
             Call Now
