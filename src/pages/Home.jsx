@@ -9,7 +9,7 @@ import goaVillas from '../assets/goa-villas-new.png';
 import heroVilla from '../assets/hero-villa-new.png';
 import logo from '../assets/logo.jpeg';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import {
   ArrowRight,
@@ -239,13 +239,21 @@ const FormField = ({ id, label, type = 'text', placeholder, options }) => {
           placeholder={placeholder}
           className={inputClass}
           required
+          onInput={
+            type === 'tel'
+              ? (e) => {
+                  e.target.value = e.target.value.replace(/[^0-9+]/g, '');
+                }
+              : undefined
+          }
+          maxLength={type === 'tel' ? 15 : undefined}
         />
       )}
     </label>
   );
 };
 
-const LeadForm = ({ formId, title, description, buttonLabel = 'Get a Callback' }) => {
+const LeadForm = ({ formId, title, description, buttonLabel = 'Get a Callback', customClass }) => {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (event) => {
@@ -256,19 +264,19 @@ const LeadForm = ({ formId, title, description, buttonLabel = 'Get a Callback' }
 
   return (
     <div
-      className={`${cardClass} reveal-up relative overflow-hidden p-5 sm:p-6 lg:p-7`}
+      className={`${customClass || cardClass} reveal-up relative overflow-hidden p-4 sm:p-5 lg:p-6`}
       style={revealStyle('0.18s')}
     >
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,#C9A84C,transparent)]" />
-      <p className="text-[10px] tracking-[0.24em] text-[#C9A84C] uppercase sm:text-xs sm:tracking-[0.28em]">
+      <p className="text-[10px] tracking-[0.22em] text-[#C9A84C] uppercase sm:text-xs sm:tracking-[0.26em]">
         Reserve Your Slot
       </p>
-      <h3 className="font-heading mt-3 text-[1.9rem] leading-none font-light text-[#F5F0E8] sm:text-[2.3rem]">
+      <h3 className="font-heading mt-2 text-[1.5rem] leading-none font-light text-[#F5F0E8] sm:text-[1.8rem]">
         {title}
       </h3>
-      <p className="mt-3 text-sm leading-7 text-[#8E897F]">{description}</p>
+      <p className="mt-2 text-xs leading-relaxed text-[#8E897F] sm:text-sm">{description}</p>
 
-      <form className="mt-6 grid gap-4" onSubmit={handleSubmit}>
+      <form className="mt-4 grid gap-3" onSubmit={handleSubmit}>
         <FormField id={`${formId}-name`} label="Name" placeholder="Your full name" />
         <FormField id={`${formId}-phone`} label="Phone" type="tel" placeholder="+91" />
         <FormField id={`${formId}-city`} label="City" placeholder="Your city" />
@@ -294,6 +302,16 @@ const LeadForm = ({ formId, title, description, buttonLabel = 'Get a Callback' }
 
 const Home = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const heroSliderImages = [heroVilla, goaVillas, goaBedroom, brochureLounge];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSliderImages.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="relative overflow-x-hidden bg-[#0A0A0A] text-[#F5F0E8]">
@@ -367,34 +385,62 @@ const Home = () => {
       </header>
 
       <main id="top" className="relative pb-24 md:pb-0">
-        <section className={`px-0 pt-24 sm:pt-28 lg:pt-36 ${sectionClass}`}>
+        <section
+          className={`relative flex min-h-[100svh] items-center overflow-hidden px-0 pt-20 pb-8 sm:pt-24 sm:pb-12 lg:pt-28 lg:pb-14`}
+        >
+          {/* Continuous Image Slider Background */}
+          <div className="absolute inset-0 z-0 bg-[#0A0A0A]">
+            {heroSliderImages.map((img, index) => (
+              <div
+                key={index}
+                className={`absolute inset-0 transition-opacity duration-[2000ms] ease-in-out ${
+                  index === currentSlide ? 'z-10 opacity-100' : 'z-0 opacity-0'
+                }`}
+              >
+                <img
+                  src={img}
+                  alt={`Shantim Luxury Goa Slide ${index + 1}`}
+                  className={`h-full w-full object-cover transition-transform duration-[8000ms] ease-linear ${
+                    index === currentSlide ? 'scale-105' : 'scale-100'
+                  }`}
+                />
+              </div>
+            ))}
+            {/* Premium Dark Gradient Overlay */}
+            <div className="absolute inset-0 z-20 bg-gradient-to-t from-[#0A0A0A] via-[rgba(10,10,10,0.5)] to-[rgba(10,10,10,0.2)] lg:bg-gradient-to-r lg:from-[#0A0A0A] lg:via-[rgba(10,10,10,0.4)] lg:to-transparent" />
+            <div className="absolute inset-0 z-20 bg-black/10" />
+
+            {/* Bottom blend layer */}
+            <div className="absolute inset-x-0 bottom-0 z-20 h-40 bg-[linear-gradient(180deg,transparent,rgba(10,10,10,1))]" />
+          </div>
+
           <div
-            className={`${shellClass} grid items-start gap-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(340px,0.95fr)] lg:gap-8`}
+            className={`${shellClass} relative z-30 grid items-center gap-6 sm:gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,380px)] lg:gap-10`}
           >
             <div className="order-1">
               <div
-                className="reveal-up inline-flex border border-[rgba(201,168,76,0.22)] bg-[rgba(20,20,20,0.7)] px-3 py-2 text-[10px] tracking-[0.2em] text-[#C9A84C] uppercase sm:px-4 sm:text-xs sm:tracking-[0.28em]"
+                className="reveal-up inline-flex border border-[rgba(201,168,76,0.3)] bg-[rgba(10,10,10,0.4)] px-3 py-2 text-[10px] tracking-[0.2em] text-[#C9A84C] uppercase backdrop-blur-md sm:px-4 sm:text-xs sm:tracking-[0.28em]"
                 style={revealStyle('0s')}
               >
                 Doda Marg, Goa - Luxury Lakeside Township
               </div>
 
               <h1
-                className="font-heading reveal-up mt-5 max-w-4xl text-[2.35rem] leading-[0.92] font-light text-[#F5F0E8] sm:mt-6 sm:text-[3.4rem] lg:text-[5.7rem]"
+                className="font-heading reveal-up mt-4 max-w-4xl text-[2rem] leading-[1] font-light text-[#F5F0E8] sm:mt-5 sm:text-[2.8rem] lg:text-[4.5rem]"
                 style={revealStyle('0.08s')}
               >
                 Experience Lakeside Living Like Never Before
               </h1>
 
               <p
-                className="reveal-up mt-4 text-base text-[#C9A84C] italic sm:text-xl lg:text-2xl"
+                className="reveal-up mt-3 text-base text-[#C9A84C] italic sm:mt-4 sm:text-lg lg:text-xl"
                 style={revealStyle('0.12s')}
               >
                 100 Acres of Tranquil Paradise, Goa
               </p>
 
               <p
-                className="reveal-up mt-5 max-w-2xl text-sm leading-7 text-[#9A978C] sm:text-base sm:leading-8"
+                className="reveal-up mt-3 max-w-2xl text-xs leading-relaxed text-[#D5CDBE] sm:mt-4 sm:text-sm lg:text-base lg:leading-8"
                 style={revealStyle('0.16s')}
               >
                 Shantim is a luxury lakeside township shaped around a 4 acre lake, signature
@@ -402,32 +448,34 @@ const Home = () => {
                 calmer, more elevated side of Goa.
               </p>
 
-              <div className="mt-5 grid gap-3 sm:grid-cols-3">
+              <div className="mt-4 grid gap-2 sm:mt-5 sm:grid-cols-3 sm:gap-3">
                 {heroHighlights.map((item, index) => (
                   <div
                     key={item}
-                    className="reveal-up flex items-start gap-3 border border-[rgba(201,168,76,0.12)] bg-[rgba(17,17,17,0.68)] px-3 py-3"
+                    className="reveal-up flex items-start gap-2 border border-[rgba(201,168,76,0.15)] bg-[rgba(10,10,10,0.3)] px-2.5 py-2.5 backdrop-blur-sm sm:px-3 sm:py-3"
                     style={revealStyle(`${0.18 + index * 0.04}s`)}
                   >
-                    <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center border border-[rgba(201,168,76,0.2)] text-[#C9A84C]">
-                      <Check size={14} />
+                    <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center border border-[rgba(201,168,76,0.2)] text-[#C9A84C]">
+                      <Check size={12} />
                     </span>
-                    <span className="text-xs leading-6 text-[#D8D1C2] sm:text-sm">{item}</span>
+                    <span className="text-[10px] leading-relaxed text-[#F5F0E8] sm:text-xs">
+                      {item}
+                    </span>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-5 grid grid-cols-3 gap-3 sm:mt-6">
+              <div className="mt-4 grid grid-cols-3 gap-2 sm:mt-5 sm:gap-3">
                 {heroStats.map((stat, index) => (
                   <div
                     key={stat.label}
-                    className={`${cardClass} reveal-up p-3 text-center sm:p-4`}
+                    className={`reveal-up border border-[rgba(255,255,255,0.08)] bg-[rgba(10,10,10,0.25)] p-3 text-center shadow-lg backdrop-blur-md sm:p-4`}
                     style={revealStyle(`${0.24 + index * 0.05}s`)}
                   >
-                    <p className="font-heading text-[1.65rem] font-light text-[#F5F0E8] sm:text-[2rem]">
+                    <p className="font-heading text-[1.4rem] font-light text-[#F5F0E8] sm:text-[1.8rem]">
                       {stat.value}
                     </p>
-                    <p className="mt-1 text-[10px] tracking-[0.18em] text-[#89847A] uppercase sm:text-xs sm:tracking-[0.24em]">
+                    <p className="mt-1 text-[9px] tracking-[0.18em] text-[#C9A84C] uppercase sm:text-[10px] sm:tracking-[0.24em]">
                       {stat.label}
                     </p>
                   </div>
@@ -435,59 +483,36 @@ const Home = () => {
               </div>
 
               <div
-                className="reveal-up mt-5 flex flex-col gap-3 sm:mt-6 sm:flex-row"
+                className="reveal-up mt-5 flex flex-col gap-2 sm:mt-6 sm:flex-row sm:gap-3"
                 style={revealStyle('0.34s')}
               >
                 <a
                   href={brochureUrl}
                   download
-                  className={`${buttonBaseClass} bg-[#C9A84C] text-[#0A0A0A]`}
+                  className={`${buttonBaseClass} bg-[#C9A84C] py-2.5 text-[#0A0A0A] sm:py-3`}
                 >
                   Download Brochure
                   <ArrowRight size={16} />
                 </a>
-                <a href="#enquire" className={`${buttonBaseClass} bg-transparent text-[#F5F0E8]`}>
+                <a
+                  href="#enquire"
+                  className={`${buttonBaseClass} bg-[rgba(10,10,10,0.5)] py-2.5 text-[#F5F0E8] backdrop-blur-md hover:bg-[rgba(201,168,76,0.1)] sm:py-3`}
+                >
                   Book Site Visit
                   <ChevronRight size={16} />
                 </a>
               </div>
             </div>
 
-            <div className="order-2 grid gap-4 sm:gap-5">
-              <div
-                className={`${cardClass} media-panel reveal-up relative overflow-hidden p-3 sm:p-4`}
-                style={revealStyle('0.18s')}
-              >
-                <div className="absolute top-4 left-4 z-10 border border-[rgba(201,168,76,0.18)] bg-[rgba(10,10,10,0.74)] px-3 py-2 text-[10px] tracking-[0.18em] text-[#F5F0E8] uppercase sm:top-5 sm:left-5">
-                  Lakeside Villa Experience
-                </div>
-                <img
-                  src={heroVilla}
-                  alt="Luxury lakeside villa at Shantim Goa"
-                  className="h-[230px] w-full object-cover sm:h-[320px] lg:h-[390px]"
+            <div className="order-2 w-full lg:ml-auto lg:max-w-md">
+              <div className="transform transition-transform duration-500 hover:-translate-y-1">
+                <LeadForm
+                  formId="hero"
+                  title="Request Pricing & Availability"
+                  description="Share your details for a callback, brochure access, and villa guidance from the Shantim team."
+                  customClass="hover-lift border border-[rgba(255,255,255,0.1)] bg-[rgba(10,10,10,0.35)] backdrop-blur-xl shadow-2xl"
                 />
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(180deg,transparent,rgba(10,10,10,0.95))]" />
-                <div className="absolute right-4 bottom-4 left-4 z-10 grid gap-3 sm:right-5 sm:bottom-5 sm:left-5 sm:grid-cols-2">
-                  <div className="float-slow border border-[rgba(201,168,76,0.18)] bg-[rgba(12,12,12,0.76)] px-3 py-3">
-                    <p className="text-[10px] tracking-[0.18em] text-[#C9A84C] uppercase">
-                      Signature Edge
-                    </p>
-                    <p className="mt-1 text-sm text-[#F5F0E8]">Lake-facing township planning</p>
-                  </div>
-                  <div className="float-slower border border-[rgba(245,240,232,0.14)] bg-[rgba(12,12,12,0.76)] px-3 py-3">
-                    <p className="text-[10px] tracking-[0.18em] text-[#C9A84C] uppercase">
-                      Phase 1
-                    </p>
-                    <p className="mt-1 text-sm text-[#F5F0E8]">24 to 36 months completion</p>
-                  </div>
-                </div>
               </div>
-
-              <LeadForm
-                formId="hero"
-                title="Request Pricing & Availability"
-                description="Share your details for a callback, brochure access, and villa guidance from the Shantim team."
-              />
             </div>
           </div>
         </section>
