@@ -45,7 +45,7 @@ const navLinks = [
 
 const heroStats = [
   { value: '100+', label: 'Acres' },
-  { value: '6 Acre', label: 'Lakefront' },
+  { value: '4 Acre', label: 'Lakefront' },
   { value: '5-Star', label: 'Services' },
 ];
 
@@ -84,7 +84,7 @@ const whyGoaCards = [
 
 const statStrip = [
   { value: '100+', label: 'Acres' },
-  { value: '6 Acre', label: 'Lake' },
+  { value: '4 Acre', label: 'Lake' },
   { value: '500+', label: 'Flower Species' },
   { value: '2 Acre', label: 'Entertainment' },
   { value: '5★', label: 'Services' },
@@ -582,7 +582,7 @@ const Home = () => {
                     </div>
                     <div>
                       <p className="font-heading text-[2.4rem] leading-none font-light text-[#F5F0E8]">
-                        6 Acre
+                        4 Acre
                       </p>
                       <p className="mt-2 text-[10px] tracking-[0.18em] text-[#89847A] uppercase sm:text-xs">
                         Signature Lake
