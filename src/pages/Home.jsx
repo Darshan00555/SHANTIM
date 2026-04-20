@@ -397,7 +397,7 @@ const Home = () => {
                 className="reveal-up mt-5 max-w-2xl text-sm leading-7 text-[#9A978C] sm:text-base sm:leading-8"
                 style={revealStyle('0.16s')}
               >
-                Shantim is a luxury lakeside township shaped around a 6 acre lake, signature
+                Shantim is a luxury lakeside township shaped around a 4 acre lake, signature
                 landscapes, low-density villa living, and 5-star services for buyers who want a
                 calmer, more elevated side of Goa.
               </p>
